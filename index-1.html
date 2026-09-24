@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+.form-outro {
+    max-width: 900px;
+    margin: 25px auto 0;
+    padding: 20px 30px;
+    text-align: center;
+    color: #5f6b7a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.form-outro p {
+    margin: 5px 0;
+}
+
+/* ==================== GENERATED CV ==================== */
+
+#cv-output {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 50px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+.cv-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cv-title h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #1f3a5f;
+}
+
+.cv-section {
+    margin-top: 25px;
+}
+
+.cv-section-title {
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #1f3a5f;
+    color: #1f3a5f;
+    font-size: 18px;
+}
+
+.cv-personal {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 25px;
+    align-items: start;
+}
+
+.cv-personal .cv-photo {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+}
+
+.cv-photo {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #aaa;
+    justify-self: end;
+}
+
+.cv-info {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    row-gap: 7px;
+}
+
+.cv-label {
+    font-weight: bold;
+}
+
+.cv-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+.cv-table th,
+.cv-table td {
+    border: 1px solid #bbb;
+    padding: 8px;
+    text-align: left;
+}
+
+.cv-signature {
+    margin-top: 45px;
+    text-align: right;
+}
+
+.cv-signature img {
+    display: block;
+    width: 140px;
+    max-height: 60px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+.cv-signature-line {
+    width: 140px;
+    margin-left: auto;
+    border-top: 1px solid #222;
+    padding-top: 5px;
+}
+
+.cv-buttons {
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cv-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.cv-personal {
+    grid-template-columns: 1fr;
+}
+
+    .cv-personal {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-photo {
+        justify-self: start;
+    }
+
+    .cv-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== ADDRESS SECTION ==================== */
+
+.address-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    margin-top: 8px;
+}
+
+.address-field {
+    display: block;
+    margin-bottom: 18px;
+}
+
+.address-field > label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: inherit;
+}
+
+.address-field.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* ==================== LOCAL GOVERNMENT ==================== */
+
+.local-government-options {
+    display: flex;
+    gap: 18px;
+    margin: 8px 0 12px;
+    flex-wrap: wrap;
+}
+
+.local-government-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+}
+
+.local-government-options input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+.local-government-input {
+    display: none;
+    margin-bottom: 18px;
+}
+
+.local-government-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.local-government-input input {
+    width: 100%;
+}
+
+.address-field small {
+    font-weight: normal;
+    color: #777;
+}
+
+@media (max-width: 650px) {
+    .address-section {
+        grid-template-columns: 1fr;
+    }
+
+    .address-field.full-width {
+        grid-column: 1;
+    }
+}
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h1 {
+    margin: 0 0 10px;
+    color: #1f3a5f;
+    font-size: 32px;
+}
+
+.intro p {
+    margin: 0;
+    color: #5f6b7a;
+    font-size: 15px;
+    line-height: 1.6;
+}
+input[type="radio"] {
+    width: auto;
+    margin-right: 6px;
+}
+.blood-types,
+.marital-status {
+    display: grid;
+    gap: 10px;
+}
+
+.blood-types {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.marital-status {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.blood-types label,
+.marital-status label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.height-inputs input {
+    width: 100px;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #f5f7fa;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+}
+
+form {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e1e5ea;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d7dee8;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-size: 15px;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+}
+.section-heading {
+    margin-top: 35px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1f3a5f;
+    color: #1f3a5f;
+    font-size: 20px;
+}
+.gender-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gender-options input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+    </style>
+</head>
+    <body>
+<div class="intro">
+    <h1>Curriculum Vitae</h1>
+<p>
+    Please provide the following information to prepare your curriculum vitae.
+    Make sure the information you provide is accurate and up to date.
+    If you do not wish to fill in an optional field or do not currently have the information, you may enter "N/A" or "0" for numerical fields where applicable.
+</p>
+</div>
+<form>
+<p class="section-heading">Personal Information</p>
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name">
+
+    <br><br>
+
+    <label for="nickname">Nickname:</label>
+    <input type="text" id="nickname" name="nickname">
+
+    <br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <br><br>
+
+    <label for="age">Age:</label>
+<input type="number" id="age" name="age" readonly>
+
+    <br><br>
+<label>Gender:</label><br>
+
+<input type="radio" id="male" name="gender" value="Male">
+<label for="male">Male</label>
+<br>
+
+<input type="radio" id="female" name="gender" value="Female">
+<label for="female">Female</label>
+<br>
+
+<input type="radio" id="third" name="gender" value="Third Gender">
+<label for="third">Third Gender</label>
+
+<br><br>
+
+<label for="nationality">Nationality:</label>
+<input type="text" id="nationality" name="nationality">
+
+<br><br>
+
+<label for="religion">Religion:</label>
+<input type="text" id="religion" name="religion">
+
+<br><br>
+
+<label>Blood Type:</label>
+
+<div class="blood-types">
+    <label><input type="radio" name="blood" value="A+"> A+</label>
+    <label><input type="radio" name="blood" value="A-"> A-</label>
+
+    <label><input type="radio" name="blood" value="B+"> B+</label>
+    <label><input type="radio" name="blood" value="B-"> B-</label>
+
+    <label><input type="radio" name="blood" value="AB+"> AB+</label>
+    <label><input type="radio" name="blood" value="AB-"> AB-</label>
+
+    <label><input type="radio" name="blood" value="O+"> O+</label>
+    <label><input type="radio" name="blood" value="O-"> O-</label>
+</div>
+
+<br><br>
+
+<label>Marital Status:</label>
+
+<div class="marital-status">
+    <label><input type="radio" name="marital" value="Unmarried"> Unmarried</label>
+    <label><input type="radio" name="marital" value="Married"> Married</label>
+
+    <label><input type="radio" name="marital" value="Divorced"> Divorced</label>
+    <label><input type="radio" name="marital" value="Widowed"> Widowed</label>
+</div>
+
+<br><br>
+
+<label for="id-number">NID / Passport / Birth Certificate No.:</label>
+<input type="number" id="id-number" name="id-number">
+
+<br><br>
+
+<label>Height:</label>
+
+<div class="height-inputs">
+    <input type="number" id="height-feet" name="height-feet" min="0" placeholder="Feet">
+    <input type="number" id="height-inch" name="height-inch" min="0" max="11" placeholder="Inch">
+</div>
+<br><br>
+<label for="weight">Weight:</label>
+<input type="number" id="weight" name="weight" min="0" step="0.1" placeholder="kg">
+<br><br>
+
+<label for="photo">Image (Passport Size):</label>
+<input type="file" id="photo" name="photo" accept="image/*">
+<br><br>
+
+
+<p class="section-heading">Contact</p>
+<label for="phone1">Phone Number 1:</label>
+<input type="tel" id="phone1" name="phone1">
+<br><br>
+<label for="phone2">Phone Number 2:</label>
+<input type="tel" id="phone2" name="phone2" placeholder="Optional">
+<br><br>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+<br><br>
+
+
+<!-- ========================================================= -->
+<!--                    PERMANENT ADDRESS                     -->
+<!-- ========================================================= -->
+
+<label>Permanent Address:</label>
+<div class="address-section">
+
+    <!-- House / Holding -->
+    <div class="address-field">
+        <label for="permanent-house">
+            House / Holding No.
+        </label>
+
+        <input
+            type="number"
+            id="permanent-house"
+            name="permanent-house"
+            placeholder="e.g. House 12">
+    </div>
+
+
+    <!-- Road / Street / Block -->
+    <div class="address-field">
+        <label for="permanent-road">
+            Road / Street / Block
+        </label>
+
+        <input
+            type="number"
+            id="permanent-road"
+            name="permanent-road"
+            placeholder="e.g. Road 5">
+    </div>
+
+
+    <!-- Village / Mohalla / Area -->
+    <div class="address-field">
+        <label for="permanent-village">
+            Village / Mohalla / Area
+        </label>
+
+        <input
+            type="text"
+            id="permanent-village"
+            name="permanent-village"
+            placeholder="Enter Village / Mohalla / Area">
+    </div>
+
+
+    <!-- Mauza -->
+    <div class="address-field">
+        <label for="permanent-mauza">
+            Mauza <small>(Optional)</small>
+        </label>
+
+        <input
+            type="text"
+            id="permanent-mauza"
+            name="permanent-mauza"
+            placeholder="Enter Mauza">
+    </div>
+
+
+    <!-- Ward -->
+    <div class="address-field">
+        <label for="permanent-ward">
+            Ward No.
+        </label>
+
+        <input
+            type="number"
+            id="permanent-ward"
+            name="permanent-ward"
+            placeholder="e.g. 05">
+    </div>
+
+
+    <!-- Local Government -->
+    <div class="address-field full-width">
+
+        <label>
+            Local Government Type:
+        </label>
+
+        <div class="local-government-options">
+
+            <label>
+                <input
+                    type="radio"
+                    name="permanent-government-type"
+                    value="Union"
+                    onchange="showGovernmentField('permanent', 'union')">
+                Union
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="permanent-government-type"
+                    value="Pourashava"
+                    onchange="showGovernmentField('permanent', 'pourashava')">
+                Pourashava
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="permanent-government-type"
+                    value="City Corporation"
+                    onchange="showGovernmentField('permanent', 'city')">
+                City Corporation
+            </label>
+
+        </div>
+
+
+        <!-- Permanent Union -->
+        <div
+            id="permanent-union-field"
+            class="local-government-input">
+
+            <label for="permanent-union-name">
+                Union
+            </label>
+
+            <input
+                type="text"
+                id="permanent-union-name"
+                name="permanent-union-name"
+                placeholder="Enter Union name">
+
+        </div>
+
+
+        <!-- Permanent Pourashava -->
+        <div
+            id="permanent-pourashava-field"
+            class="local-government-input">
+
+            <label for="permanent-pourashava-name">
+                Pourashava
+            </label>
+
+            <input
+                type="text"
+                id="permanent-pourashava-name"
+                name="permanent-pourashava-name"
+                placeholder="Enter Pourashava name">
+
+        </div>
+
+
+        <!-- Permanent City Corporation -->
+        <div
+            id="permanent-city-field"
+            class="local-government-input">
+
+            <label for="permanent-city-name">
+                City Corporation
+            </label>
+
+            <input
+                type="text"
+                id="permanent-city-name"
+                name="permanent-city-name"
+                placeholder="Enter City Corporation name">
+
+        </div>
+
+    </div>
+
+
+    <!-- Post Office -->
+    <div class="address-field">
+
+        <label for="permanent-post">
+            Post Office
+        </label>
+
+        <input
+            type="text"
+            id="permanent-post"
+            name="permanent-post"
+            placeholder="Enter Post Office">
+
+    </div>
+
+
+    <!-- Postal Code -->
+    <div class="address-field">
+
+        <label for="permanent-postcode">
+            Postal Code
+        </label>
+
+        <input
+            type="number"
+            id="permanent-postcode"
+            name="permanent-postcode"
+            placeholder="e.g. 1340">
+
+    </div>
+
+
+    <!-- Upazila / Thana -->
+    <div class="address-field">
+
+        <label for="permanent-upazila">
+            Upazila / Thana
+        </label>
+
+        <input
+            type="text"
+            id="permanent-upazila"
+            name="permanent-upazila"
+            placeholder="Enter Upazila / Thana">
+
+    </div>
+
+
+    <!-- District -->
+    <div class="address-field">
+
+        <label for="permanent-district">
+            District
+        </label>
+
+        <input
+            type="text"
+            id="permanent-district"
+            name="permanent-district"
+            placeholder="Enter District">
+
+    </div>
+
+
+    <!-- Division -->
+    <div class="address-field">
+
+        <label for="permanent-division">
+            Division
+        </label>
+
+        <input
+            type="text"
+            id="permanent-division"
+            name="permanent-division"
+            placeholder="Enter Division">
+
+    </div>
+
+
+
+
+
+</div>
+
+
+<br>
+
+
+<!-- ========================================================= -->
+<!--                     PRESENT ADDRESS                      -->
+<!-- ========================================================= -->
+
+<label>Present Address:</label>
+
+<div class="address-section">
+
+    <!-- House / Holding -->
+    <div class="address-field">
+
+        <label for="present-house">
+            House / Holding No.
+        </label>
+
+        <input
+            type="number"
+            id="present-house"
+            name="present-house"
+            placeholder="e.g. House 12">
+
+    </div>
+
+
+    <!-- Road / Street / Block -->
+    <div class="address-field">
+
+        <label for="present-road">
+            Road / Street / Block
+        </label>
+
+        <input
+            type="number"
+            id="present-road"
+            name="present-road"
+            placeholder="e.g. Road 5">
+
+    </div>
+
+
+    <!-- Village / Mohalla / Area -->
+    <div class="address-field">
+
+        <label for="present-village">
+            Village / Mohalla / Area
+        </label>
+
+        <input
+            type="text"
+            id="present-village"
+            name="present-village"
+            placeholder="Enter Village / Mohalla / Area">
+
+    </div>
+
+
+    <!-- Mauza -->
+    <div class="address-field">
+
+        <label for="present-mauza">
+            Mauza <small>(Optional)</small>
+        </label>
+
+        <input
+            type="text"
+            id="present-mauza"
+            name="present-mauza"
+            placeholder="Enter Mauza">
+
+    </div>
+
+
+    <!-- Ward -->
+    <div class="address-field">
+
+        <label for="present-ward">
+            Ward No.
+        </label>
+
+        <input
+            type="number"
+            id="present-ward"
+            name="present-ward"
+            placeholder="e.g. 05">
+
+    </div>
+
+
+    <!-- Local Government -->
+    <div class="address-field full-width">
+
+        <label>
+            Local Government Type:
+        </label>
+
+        <div class="local-government-options">
+
+            <label>
+                <input
+                    type="radio"
+                    name="present-government-type"
+                    value="Union"
+                    onchange="showGovernmentField('present', 'union')">
+                Union
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="present-government-type"
+                    value="Pourashava"
+                    onchange="showGovernmentField('present', 'pourashava')">
+                Pourashava
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="present-government-type"
+                    value="City Corporation"
+                    onchange="showGovernmentField('present', 'city')">
+                City Corporation
+            </label>
+
+        </div>
+
+
+        <!-- Present Union -->
+        <div
+            id="present-union-field"
+            class="local-government-input">
+
+            <label for="present-union-name">
+                Union
+            </label>
+
+            <input
+                type="text"
+                id="present-union-name"
+                name="present-union-name"
+                placeholder="Enter Union name">
+
+        </div>
+
+
+        <!-- Present Pourashava -->
+        <div
+            id="present-pourashava-field"
+            class="local-government-input">
+
+            <label for="present-pourashava-name">
+                Pourashava
+            </label>
+
+            <input
+                type="text"
+                id="present-pourashava-name"
+                name="present-pourashava-name"
+                placeholder="Enter Pourashava name">
+
+        </div>
+
+
+        <!-- Present City Corporation -->
+        <div
+            id="present-city-field"
+            class="local-government-input">
+
+            <label for="present-city-name">
+                City Corporation
+            </label>
+
+            <input
+                type="text"
+                id="present-city-name"
+                name="present-city-name"
+                placeholder="Enter City Corporation name">
+
+        </div>
+
+    </div>
+
+
+    <!-- Post Office -->
+    <div class="address-field">
+
+        <label for="present-post">
+            Post Office
+        </label>
+
+        <input
+            type="text"
+            id="present-post"
+            name="present-post"
+            placeholder="Enter Post Office">
+
+    </div>
+
+
+    <!-- Postal Code -->
+    <div class="address-field">
+
+        <label for="present-postcode">
+            Postal Code
+        </label>
+
+        <input
+            type="number"
+            id="present-postcode"
+            name="present-postcode"
+            placeholder="e.g. 1340">
+
+    </div>
+
+
+    <!-- Upazila / Thana -->
+    <div class="address-field">
+
+        <label for="present-upazila">
+            Upazila / Thana
+        </label>
+
+        <input
+            type="text"
+            id="present-upazila"
+            name="present-upazila"
+            placeholder="Enter Upazila / Thana">
+
+    </div>
+
+
+    <!-- District -->
+    <div class="address-field">
+
+        <label for="present-district">
+            District
+        </label>
+
+        <input
+            type="text"
+            id="present-district"
+            name="present-district"
+            placeholder="Enter District">
+
+    </div>
+
+
+    <!-- Division -->
+    <div class="address-field">
+
+        <label for="present-division">
+            Division
+        </label>
+
+        <input
+            type="text"
+            id="present-division"
+            name="present-division"
+            placeholder="Enter Division">
+    </div>
+
+
+</div>
+<br><br>
+<label for="emergency">Emergency Contact:</label>
+<input type="tel" id="emergency" name="emergency">
+<br><br>
+<p class="section-heading">Family</p>
+<label for="father-name">Father's Name:</label>
+<input type="text" id="father-name" name="father-name">
+<br><br>
+<label for="mother-name">Mother's Name:</label>
+<input type="text" id="mother-name" name="mother-name">
+<br><br>
+<label for="siblings">Number of Siblings:</label>
+<input type="number" id="siblings" name="siblings" min="0">
+<br><br>
+<label for="spouse-name">Spouse's Name:</label>
+<input type="text" id="spouse-name" name="spouse-name" placeholder="Optional">
+<br><br>
+<label for="spouse-contact">Spouse's Contact:</label>
+<input type="tel" id="spouse-contact" name="spouse-contact" placeholder="Optional">
+<br><br>
+<label for="children">Number of Children:</label>
+<input type="number" id="children" name="children" min="0" placeholder="Optional">
+    <br><br>
+<p class="section-heading">Education</p>
+
+<p> SSC: </p>
+<label for="ssc-gpa">GPA:</label>
+<input type="number" id="ssc-gpa" name="ssc-gpa" min="0" max="5" step="0.01">
+<br><br>
+<label for="ssc-group">Group:</label>
+<select id="ssc-group" name="ssc-group">
+    <option value="">Select Group</option>
+    <option value="Science">Science</option>
+    <option value="Humanities">Humanities</option>
+    <option value="Business Studies">Business Studies</option>
+</select>
+<br><br>
+<label for="ssc-board">Board:</label>
+<select id="ssc-board" name="ssc-board">
+    <option value="">Select Board</option>
+    <option value="Dhaka">Dhaka</option>
+    <option value="Rajshahi">Rajshahi</option>
+    <option value="Sylhet">Sylhet</option>
+    <option value="Cumilla">Cumilla</option>
+    <option value="Chattogram">Chattogram</option>
+    <option value="Barisal">Barisal</option>
+    <option value="Khulna">Khulna</option>
+    <option value="Rangpur">Rangpur</option>
+    <option value="Mymensingh">Mymensingh</option>
+</select>
+<br><br>
+<label for="ssc-institution">Institution:</label>
+<input type="text" id="ssc-institution" name="ssc-institution">
+
+<p>HSC:</p>
+
+<label for="hsc-gpa">GPA:</label>
+<input type="number" id="hsc-gpa" name="hsc-gpa" min="0" max="5" step="0.01">
+<br><br>
+<label for="hsc-group">Group:</label>
+<select id="hsc-group" name="hsc-group">
+    <option value="">Select Group</option>
+    <option value="Science">Science</option>
+    <option value="Humanities">Humanities</option>
+    <option value="Business Studies">Business Studies</option>
+</select>
+<br><br>
+<label for="hsc-board">Board:</label>
+<select id="hsc-board" name="hsc-board">
+    <option value="">Select Board</option>
+    <option value="Dhaka">Dhaka</option>
+    <option value="Rajshahi">Rajshahi</option>
+    <option value="Sylhet">Sylhet</option>
+    <option value="Cumilla">Cumilla</option>
+    <option value="Chattogram">Chattogram</option>
+    <option value="Barisal">Barisal</option>
+    <option value="Khulna">Khulna</option>
+    <option value="Rangpur">Rangpur</option>
+    <option value="Mymensingh">Mymensingh</option>
+</select>
+<br><br>
+<label for="hsc-institution">Institution:</label>
+<input type="text" id="hsc-institution" name="hsc-institution">
+<br><br>
+
+<p>Honours:</p>
+
+<label for="honours-cgpa">CGPA:</label>
+<input type="number" id="honours-cgpa" name="honours-cgpa"
+       min="0" max="4" step="0.01">
+<br><br>
+<label for="honours-department">Department:</label>
+<input type="text" id="honours-department" name="honours-department">
+<br><br>
+<label for="honours-institution">Institution:</label>
+<input type="text" id="honours-institution" name="honours-institution">
+<br><br>
+
+<p>Master's:</p>
+
+<label for="masters-cgpa">CGPA:</label>
+<input type="number" id="masters-cgpa" name="masters-cgpa"
+       min="0" max="4" step="0.01">
+<br><br>
+<label for="masters-department">Department:</label>
+<input type="text" id="masters-department" name="masters-department">
+<br><br>
+<label for="masters-institution">Institution:</label>
+<input type="text" id="masters-institution" name="masters-institution">
+<br><br>
+<p class="section-heading">Occupation</p>
+<label for="position">Position:</label>
+<input type="text" id="position" name="position">
+<br><br>
+<label for="work-institution">Institution:</label>
+<input type="text" id="work-institution" name="work-institution">
+<br><br>
+<label for="work-address">Address:</label>
+<textarea id="work-address" name="work-address"></textarea>
+<br><br>
+
+  <p class="section-heading">Others</p>
+<label for="interest">Interest:</label>
+<input type="text" id="interest" name="interest"
+       placeholder="e.g. Reading, research, sports">
+<br><br>
+<label for="language-skills">Language Skills:</label>
+<input type="text" id="language-skills" name="language-skills">
+<br><br>
+<label for="computer-skills">Computer Skills:</label>
+<input type="text" id="computer-skills" name="computer-skills">
+<br><br>
+<label for="goals">Goals:</label>
+<input type="text" id="goals" name="goals">
+<br><br>
+<label for="signature">Signature:</label>
+<input type="file" id="signature" name="signature" accept="image/*">
+<br><br>
+<label for="date">Date:</label>
+<input type="date" id="date" name="date">
+<br><br>
+
+<button type="submit">Generate CV</button>
+</form>
+<div class="form-outro">
+    <p>
+        Thank you for providing your information.
+        Please review all the information carefully before generating your CV.
+    </p>
+    <p>
+        Your information will be used to prepare your curriculum vitae based on
+        the details you have provided.
+    </p>
+</div>
+
+<div id="cv-output" style="display: none;"></div>
+
+<script>
+    const dobInput = document.getElementById("dob");
+    const ageInput = document.getElementById("age");
+
+    dobInput.addEventListener("change", function () {
+        const dob = new Date(this.value);
+        const today = new Date();
+
+        let age = today.getFullYear() - dob.getFullYear();
+
+        const monthDifference = today.getMonth() - dob.getMonth();
+
+        if (
+            monthDifference < 0 ||
+            (monthDifference === 0 && today.getDate() < dob.getDate())
+        ) {
+            age--;
+        }
+
+        ageInput.value = age;
+    });
+</script>
+<script>
+
+function showGovernmentField(addressType, selectedType) {
+
+    // IDs for the three local-government fields
+    const fields = [
+        "union",
+        "pourashava",
+        "city"
+    ];
+
+
+    // Hide all three fields for this address
+    fields.forEach(function(field) {
+
+        const element = document.getElementById(
+            addressType + "-" + field + "-field"
+        );
+
+        if (element) {
+            element.style.display = "none";
+        }
+
+    });
+
+
+    // Show the selected field
+    const selectedField = document.getElementById(
+        addressType + "-" + selectedType + "-field"
+    );
+
+    if (selectedField) {
+        selectedField.style.display = "block";
+    }
+
+}
+
+</script>
+<script>
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const getValue = (id) => {
+        const element = document.getElementById(id);
+        return element ? element.value.trim() : "";
+    };
+
+    const getRadio = (name) => {
+        const selected = document.querySelector(`input[name="${name}"]:checked`);
+        return selected ? selected.value : "";
+    };
+
+    const photoInput = document.getElementById("photo");
+    const signatureInput = document.getElementById("signature");
+
+    const photoFile = photoInput && photoInput.files.length
+        ? photoInput.files[0]
+        : null;
+
+    const signatureFile = signatureInput && signatureInput.files.length
+        ? signatureInput.files[0]
+        : null;
+
+    const cvOutput = document.getElementById("cv-output");
+
+    function createRow(label, value) {
+        if (!value) return "";
+        return `
+            <div class="cv-label">${label}</div>
+            <div>${value}</div>
+        `;
+    }
+
+    function readImage(file) {
+        return new Promise((resolve) => {
+            if (!file) {
+                resolve("");
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                resolve(e.target.result);
+            };
+
+            reader.readAsDataURL(file);
+        });
+    }
+
+    Promise.all([
+        readImage(photoFile),
+        readImage(signatureFile)
+    ]).then(([photoData, signatureData]) => {
+
+        const fullName = getValue("name") || "N/A";
+
+        let personalInfo = "";
+
+        personalInfo += createRow("Full Name:", fullName);
+        personalInfo += createRow("Nickname:", getValue("nickname"));
+        personalInfo += createRow("Date of Birth:", getValue("dob"));
+        personalInfo += createRow("Age:", getValue("age"));
+        personalInfo += createRow("Gender:", getRadio("gender"));
+        personalInfo += createRow("Nationality:", getValue("nationality"));
+        personalInfo += createRow("Religion:", getValue("religion"));
+        personalInfo += createRow("Blood Type:", getRadio("blood"));
+        personalInfo += createRow("Marital Status:", getRadio("marital"));
+        personalInfo += createRow(
+            "NID / Passport / Birth Certificate No.:",
+            getValue("id-number")
+        );
+        personalInfo += createRow(
+            "Height:",
+            getValue("height-feet") || getValue("height-inch")
+                ? `${getValue("height-feet") || 0} ft ${getValue("height-inch") || 0} in`
+                : ""
+        );
+        personalInfo += createRow(
+            "Weight:",
+            getValue("weight") ? `${getValue("weight")} kg` : ""
+        );
+
+        cvOutput.innerHTML = `
+            <div class="cv-title">
+                <h1>CURRICULUM VITAE</h1>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-section-title">Personal Information</h2>
+
+                <div class="cv-personal">
+                    <div class="cv-info">
+                        ${personalInfo}
+                    </div>
+
+                    ${
+                        photoData
+                        ? `<img src="${photoData}" class="cv-photo" alt="Passport Size Photo">`
+                        : ""
+                    }
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-section-title">Contact Information</h2>
+
+                <div class="cv-info">
+                    ${createRow("Phone Number 1:", getValue("phone1"))}
+                    ${createRow("Phone Number 2:", getValue("phone2"))}
+                    ${createRow("Email:", getValue("email"))}
+                    ${createRow("Emergency Contact:", getValue("emergency"))}
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-section-title">Family Information</h2>
+
+                <div class="cv-info">
+                    ${createRow("Father's Name:", getValue("father-name"))}
+                    ${createRow("Mother's Name:", getValue("mother-name"))}
+                    ${createRow("Number of Siblings:", getValue("siblings"))}
+                    ${createRow("Spouse's Name:", getValue("spouse-name"))}
+                    ${createRow("Spouse's Contact:", getValue("spouse-contact"))}
+                    ${createRow("Number of Children:", getValue("children"))}
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-section-title">Education</h2>
+
+                <table class="cv-table">
+                    <tr>
+                        <th>Level</th>
+                        <th>Details</th>
+                    </tr>
+
+                    <tr>
+                        <td>SSC</td>
+                        <td>
+                            ${getValue("ssc-gpa") ? "GPA: " + getValue("ssc-gpa") + "<br>" : ""}
+                            ${getValue("ssc-group") ? "Group: " + getValue("ssc-group") + "<br>" : ""}
+                            ${getValue("ssc-board") ? "Board: " + getValue("ssc-board") + "<br>" : ""}
+                            ${getValue("ssc-institution") ? "Institution: " + getValue("ssc-institution") : ""}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>HSC</td>
+                        <td>
+                            ${getValue("hsc-gpa") ? "GPA: " + getValue("hsc-gpa") + "<br>" : ""}
+                            ${getValue("hsc-group") ? "Group: " + getValue("hsc-group") + "<br>" : ""}
+                            ${getValue("hsc-board") ? "Board: " + getValue("hsc-board") + "<br>" : ""}
+                            ${getValue("hsc-institution") ? "Institution: " + getValue("hsc-institution") : ""}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Honours</td>
+                        <td>
+                            ${getValue("honours-cgpa") ? "CGPA: " + getValue("honours-cgpa") + "<br>" : ""}
+                            ${getValue("honours-department") ? "Department: " + getValue("honours-department") + "<br>" : ""}
+                            ${getValue("honours-institution") ? "Institution: " + getValue("honours-institution") : ""}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Master's</td>
+                        <td>
+                            ${getValue("masters-cgpa") ? "CGPA: " + getValue("masters-cgpa") + "<br>" : ""}
+                            ${getValue("masters-department") ? "Department: " + getValue("masters-department") + "<br>" : ""}
+                            ${getValue("masters-institution") ? "Institution: " + getValue("masters-institution") : ""}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-section-title">Occupation</h2>
+
+                <div class="cv-info">
+                    ${createRow("Position:", getValue("position"))}
+                    ${createRow("Institution:", getValue("work-institution"))}
+                    ${createRow("Address:", getValue("work-address"))}
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2 class="cv-section-title">Others</h2>
+
+                <div class="cv-info">
+                    ${createRow("Interest:", getValue("interest"))}
+                    ${createRow("Language Skills:", getValue("language-skills"))}
+                    ${createRow("Computer Skills:", getValue("computer-skills"))}
+                    ${createRow("Goals:", getValue("goals"))}
+                </div>
+            </div>
+
+            <div class="cv-signature">
+                ${
+                    signatureData
+                    ? `<img src="${signatureData}" alt="Signature">`
+                    : ""
+                }
+
+                <div class="cv-signature-line">
+                    Signature
+                </div>
+
+                <div>
+                    Date: ${getValue("date") || "N/A"}
+                </div>
+            </div>
+
+            <div class="cv-buttons">
+                <button type="button" onclick="editCV()">Edit CV</button>
+                <button type="button" onclick="window.print()">Print / Save as PDF</button>
+            </div>
+        `;
+
+        document.querySelector("form").style.display = "none";
+        cvOutput.style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+
+function editCV() {
+    document.querySelector("form").style.display = "block";
+    document.getElementById("cv-output").style.display = "none";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
+    </body>
+</html>
